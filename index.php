@@ -1,4 +1,8 @@
-<?php // include('registration/server.php') ?>
+<?php
+/* Main page with two forms: sign up and log in */
+require 'db.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,6 +10,18 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>template</title>
   </head>
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  if (isset($_POST['login'])) { //gebruiker logt in
+    require 'login.php';
+  }
+  elseif (isset($_POST['register'])) { //gebruiker registreren
+    require 'register.php';
+  }
+}
+ ?>
+
   <body>
     <?php include("php/header.php"); ?>
     <?php include('../Examen2018/includes/content.html') ?>
@@ -34,6 +50,86 @@
         </p>
         <p>Alle bronnen, links en referenties worden opgeslagen in een document dat hier op de website te zien zal zijn d.m.v deze link: <a href="#">Bronnen</a></p>
     </section>
+
+    <div class="form">
+
+        <ul class="tab-group">
+          <li class="tab"><a href="#signup">Sign Up</a></li>
+          <li class="tab active"><a href="#login">Log In</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+           <div id="login">
+            <h1>Welcome Back!</h1>
+
+            <form action="index.php" method="post" autocomplete="off">
+
+              <div class="field-wrap">
+              <label>
+                Email Address<span class="req">*</span>
+              </label>
+              <input type="email" required autocomplete="off" name="email"/>
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Password<span class="req">*</span>
+              </label>
+              <input type="password" required autocomplete="off" name="password"/>
+            </div>
+
+            <p class="forgot"><a href="forgot.php">Forgot Password?</a></p>
+
+            <button class="button button-block" name="login" />Log In</button>
+
+            </form>
+
+          </div>
+
+          <div id="signup">
+            <h1>Sign Up for Free</h1>
+
+            <form action="index.php" method="post" autocomplete="off">
+
+            <div class="top-row">
+              <div class="field-wrap">
+                <label>
+                  First Name<span class="req">*</span>
+                </label>
+                <input type="text" required autocomplete="off" name='firstname' />
+              </div>
+
+              <div class="field-wrap">
+                <label>
+                  Last Name<span class="req">*</span>
+                </label>
+                <input type="text"required autocomplete="off" name='lastname' />
+              </div>
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Email Address<span class="req">*</span>
+              </label>
+              <input type="email"required autocomplete="off" name='email' />
+            </div>
+
+            <div class="field-wrap">
+              <label>
+                Set A Password<span class="req">*</span>
+              </label>
+              <input type="password"required autocomplete="off" name='password'/>
+            </div>
+
+            <button type="submit" class="button button-block" name="register" />Register</button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </div>
 
     <?php include('../Examen2018/includes/footer.html') ?>
     <div class="content">
