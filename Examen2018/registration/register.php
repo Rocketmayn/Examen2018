@@ -39,7 +39,7 @@
 
     Please click this link to activate your account:
 
-    http://localhost/login-system/verify.php?email='.$email.'&hash='.$hash;
+    http://localhost/AppExamen2018/Examen2018/php/verify.php?email='.$email.'&hash='.$hash;
 
     mail( $to, $subject, $message_body );
 

@@ -14,10 +14,10 @@ session_start();
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (isset($_POST['login'])) { //gebruiker logt in
-    require 'login.php';
+    require 'php/login.php';
   }
   elseif (isset($_POST['register'])) { //gebruiker registreren
-    require 'register.php';
+    require 'registration/register.php';
   }
 }
  ?>
@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <ul>
           <li>HTML</li>
           <li>CSS</li>
+          <li>Javascript</li>
           <li>PHP</li>
           <li>MySQL</li>
           <li>PHPmyAdmin</li>
@@ -65,5 +66,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
       <?php endif ?>
     </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+      <script src="js/index.js"></script>
   </body>
 </html>
