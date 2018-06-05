@@ -31,7 +31,7 @@
               your account by clicking on the link in the message!";
 
     $to       = $email;
-    $subject  = 'Account Verification ( clevertechie.com )';
+    $subject  = 'Account Verification ( Examen Applicatie -en Mediaontwikkeling )';
     $message_body = '
     Hello '.$first_name.',
 
