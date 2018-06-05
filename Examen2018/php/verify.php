@@ -3,7 +3,7 @@
    is included in the register.php email message
 */
 
-require 'db.php';
+require '../db.php';
 session_start();
 
 
