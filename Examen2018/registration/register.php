@@ -17,7 +17,7 @@
 
  if ($result->num_rows > 0 ) {
    $_SESSION['message'] = 'User with this email already exists!';
-   header("location: error.php");
+   header("location: php/error.php");
  }
  else {
    $sql = "INSERT INTO users (first_name, last_name, email, password, hash) " . "VALUES ('$first_name','$last_name','$email','$password','$hash')";
@@ -43,11 +43,11 @@
 
     mail( $to, $subject, $message_body );
 
-    header("location: profile.php");
+    header("location: php/profile.php");
 
     }
     else {
       $_SESSION['message'] = 'Registration failed!';
-      header("location: error.php");
+      header("location: php/error.php");
     }
  }

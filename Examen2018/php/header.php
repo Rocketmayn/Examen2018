@@ -2,15 +2,16 @@
   <h1 class="text-left ml-5">Examen 2018</h1>
 </header>
 
+<!-- DE HREF LOOPT VIA INDEX DIRECTORY -->
 <nav class="navbar navbar-expand-lg "style="background-color: black;">
   <ul class="nav justify-content-center">
     <li class="nav-item"><a class="nav-link active" href="index.php">Home</a></li>
     <li class="nav-item"><a class="nav-link" href="#">Examen2018</a></li>
     <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-    <li class="nav-item"><a class="nav-link" href="../Examen2018/pages/account.php">Account</a></li>
+    <li class="nav-item"><a class="nav-link" href="php/profile.php">Account</a></li>
     <li class="nav-item">
       <!-- Logged in user information -->
-      <?php if (!isset($_SESSION['username'])) : ?>
+      <?php if (isset($_SESSION['username'])) : ?>
         <a class="nav-link" href="../Examen2018/registration/login.php" style="text-decoration:none">login</a>
       <?php else: ?>
         <a class="nav-link" href="registration/logout.php" style="color: red;">Logout</a>

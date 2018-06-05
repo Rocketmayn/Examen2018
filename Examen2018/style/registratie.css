@@ -21,6 +21,15 @@ a:hover {
   color: #179b77;
 }
 
+.contain {
+  width: 100%;
+  text-align: center;
+}
+.contain .form{
+  display: inline-block;
+  max-width: 500px;
+}
+
 .form {
   background: rgba(19, 35, 47, 0.9);
   padding: 40px;

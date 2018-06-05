@@ -53,22 +53,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </section>
 
     <?php include('includes/footer.html') ?>
-    <div class="content">
-      <!-- notification message -->
-      <?php if (isset($_SESSION['success'])) : ?>
+
+    <!--<div class="content">
+      notification message
+      <?php // if (isset($_SESSION['success'])) : ?>
         <div class="error success">
           <h3>
-            <?php
+            <?php /*
               echo $_SESSION['success'];
               unset($_SESSION['success']);
-             ?>
+             */?>
           </h3>
         </div>
-      <?php endif ?>
-    </div>
+      <?php // endif ?>
+    </div>-->
 
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-      <script src="js/index.js"></script>
   </body>
 </html>
