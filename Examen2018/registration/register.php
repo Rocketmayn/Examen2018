@@ -31,15 +31,17 @@
               your account by clicking on the link in the message!";
 
     $to       = $email;
-    $subject  = 'Account Verification ( Examen Applicatie -en Mediaontwikkeling )';
+    $subject  = 'Verifieer je account ( Examen Applicatie -en Mediaontwikkeling )';
     $message_body = '
-    Hello '.$first_name.',
+    Hoi '.$first_name.',
 
-    Thank you for signing up!
+    Bedankt voor het inschrijven!
 
-    Please click this link to activate your account:
+    Klik op de volgende link om je account te verifiëren:
 
     http://localhost/AppExamen2018/Examen2018/php/verify.php?email='.$email.'&hash='.$hash;
+
+    ' ( ͡° ͜ʖ ͡°) '
 
     mail( $to, $subject, $message_body );
 
