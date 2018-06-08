@@ -38,10 +38,9 @@
     Bedankt voor het inschrijven!
 
     Klik op de volgende link om je account te verifiëren:
+    ( ͡° ͜ʖ ͡°)
 
     http://localhost/AppExamen2018/Examen2018/php/verify.php?email='.$email.'&hash='.$hash;
-
-    ' ( ͡° ͜ʖ ͡°) '
 
     mail( $to, $subject, $message_body );
 
