@@ -40,7 +40,20 @@ else {
 
            <?php
 
-              if ( !$active ){
+           if (!$_SESSION['logged_in']) {
+             $_SESSION['message'] =
+
+             "Je bent niet ingelogd. Log alstublieft in om toegang te krijgen tot deze pagina.";
+
+             header("location: error.php");
+           }
+           elseif ($_SESSION['logged_in']) {
+             $_SESSION['message'] =
+
+            "<h4>Je bent ingelogd</h4>";
+
+           }
+              elseif ( !$active ){
                 echo
                 '<div class="info">
                 Account is unverified, please confirm your email by clicking on the email link!
@@ -50,7 +63,7 @@ else {
             ?>
 
             <h2><?php echo $first_name.' '.$last_name; ?></h2>
-            <p><?= $email ?></p>
+            <h4><?= $email ?></h4>
 
             <a href="php/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
          </div>
