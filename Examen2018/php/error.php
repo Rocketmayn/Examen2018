@@ -17,6 +17,7 @@
         if( isset($_SESSION['message']) AND !empty($_SESSION['message']) ):
             echo $_SESSION['message'];
         else:
+          //  echo "test error.php style";
             header( "location: ../index.php" );
         endif;
         ?>
