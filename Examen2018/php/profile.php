@@ -62,7 +62,7 @@ else {
 
             ?>
 
-            <h2><?php echo $first_name.' '.$last_name; ?></h2>
+            <h2 style="text-align: center;"><?php echo $first_name.' '.$last_name; ?></h2>
             <h4><?= $email ?></h4>
 
             <a href="php/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
