@@ -13,9 +13,9 @@
 
 
     <div class="tab2">
-  <button class="tablinks" onclick="openCity(event, 'Webstructuur')">Webstructuur</button>
+  <button class="tablinks active" onclick="openCity(event, 'Webstructuur')">Webstructuur</button>
   <button class="tablinks" onclick="openCity(event, 'Styling')">Style</button>
-  <button class="tablinks" onclick="openCity(event, 'Registratieformulier')">Registratie (PHP)</button>
+  <button class="tablinks" onclick="openCity(event, 'Registratie')">Registratie</button>
 </div>
 
 <div id="Webstructuur" class="tabcontent">
@@ -65,12 +65,12 @@
 </div>
 
 <div id="Styling" class="tabcontent">
-<div class="mr-5 p-4">
+  <div class="mr-5 p-4">
   <h2>Styling</h2>
-<p>Voor de algehele opbouw van een standaard content pagina word er voor de styling gebruik gemaakt van custom classes met ieder unieke eigenschappen. <br />
-Één van deze classes zorgen ervoor dat je pagina word opgebouwd uit horizontale kolommen, dit noemen we colspans. </p>
-<div class="codereview">
-<p> .row::after { <br />
+  <p>Voor de algehele opbouw van een standaard content pagina word er voor de styling gebruik gemaakt van custom classes met ieder      unieke eigenschappen. <br />
+    Één van deze classes zorgen ervoor dat je pagina word opgebouwd uit horizontale kolommen, dit noemen we colspans. </p>
+  <div class="codereview">
+  <p> .row::after { <br />
           content: "";<br />
           clear: both;<br />
           display: table;<br />
@@ -95,13 +95,29 @@
         box-sizing: border-box;<br />
       }
       </p>
-</div>
-<p>Deze zogeheten colspans zorgen ervoor dat content in rijen naast elkaar geplaatst kan worden zonder dat het teveel invloed zal hebben op de andere rijen. Dit zorgt ervoor dat standaard tekstuele of visuele content erg makkelijk geplaatst kan worden.</p>
+    </div>
+    <p>Deze zogeheten colspans zorgen ervoor dat content in rijen naast elkaar geplaatst kan worden zonder dat het teveel invloed zal   hebben op de andere rijen. Dit zorgt ervoor dat standaard tekstuele of visuele content erg makkelijk geplaatst kan worden.</p>
 
 </div>
 
-<div id="Registratieformulier" class="tabcontent">
-
+<div id="Registratie" class="tabcontent">
+  <div class="mr-5 p-4">
+    <h2>Registratieformulier</h2>
+    <p>Voor het registratieformulier is er gebruik gemaakt van de volgende codetalen / systemen:</p>
+    <ul>
+      <li>HTML</li>
+      <li>Css</li>
+      <li>Javascript</li>
+      <li>Php</li>
+      <li>MySql</li>
+      <li>PhpMyAdmin</li>
+    </ul>
+    <p>Het registratiesysteem bestaat uit 1 js, 1 css en 12 php bestanden.
+      Één van deze bestanden is om een verbinding met de database te leggen. De andere bestanden verwerken vooral gegevens die vanuit het formulier worden meegegeven.
+    </p>
+    <p>Hier is een flowchart van hoe het systeem in elkaar zit:</p>
+    <img src="../img/flowchart.png" alt="">
+  </div>
 </div>
 
 <script>
