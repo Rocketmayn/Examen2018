@@ -66,6 +66,7 @@
 
 <div id="Styling" class="tabcontent">
 <div class="mr-5 p-4">
+  <h2>Styling</h2>
 <p>Voor de algehele opbouw van een standaard content pagina word er voor de styling gebruik gemaakt van custom classes met ieder unieke eigenschappen. <br />
 Één van deze classes zorgen ervoor dat je pagina word opgebouwd uit horizontale kolommen, dit noemen we colspans. </p>
 <div class="codereview">
