@@ -6,7 +6,12 @@
       <li><a class="menu-link active" href="index.php">Home</a></li>
       <li><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
       <li><a class="menu-link" href="#">Bronnen</a></li>
-      <li><a class="menu-link" href="php/profile.php">Account</a></li>
+      <li class="menu-link"><a href="../Examen2018/registration/login.php">Login</a></li>
+      <li class="menu-link"><?php  if (isset($_SESSION['id'])) {
+        echo '<a href="login.php?action=logout" style="text-decoration:none">Logout</a>';
+      }else{
+        echo '<a href="login.php" style="text-decoration: none">Logout</a>';
+      } ?></li>
     </ul>
   </nav>
   <label for="nav-toggle" class="nav-toggle-label">
