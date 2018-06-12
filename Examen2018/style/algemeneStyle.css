@@ -9,7 +9,7 @@ body{
 }
 
 .container-fluid{
-  box-shadow: 3px -6px 50px 5px #ccc;
+  box-shadow: 3px 3px 50px 5px #ccc;
 }
 
 .codereview{
@@ -73,21 +73,21 @@ color: white;
 .menu-link{
   display: block;
   padding: 0.1rem 1.6rem;
-  box-shadow: 0px -5px 17px 0px #ccc;
 }
 .menu-item{
   box-sizing: border-box;
   border: 3px solid rgb(204, 204, 204);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 2px;
   margin-right: 15px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 a.menu-link{
   color: #000;
 }
 a.menu-link:hover{
-  color: #B2B2B2;
+  color: #fff;
+  text-decoration: none;
 }
 .menubar{
   position: relative;
