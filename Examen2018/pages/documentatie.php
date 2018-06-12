@@ -98,6 +98,7 @@
     </div>
     <p>Deze zogeheten colspans zorgen ervoor dat content in rijen naast elkaar geplaatst kan worden zonder dat het teveel invloed zal   hebben op de andere rijen. Dit zorgt ervoor dat standaard tekstuele of visuele content erg makkelijk geplaatst kan worden.</p>
 
+  </div>
 </div>
 
 <div id="Registratie" class="tabcontent">
@@ -116,7 +117,7 @@
       Één van deze bestanden is om een verbinding met de database te leggen. De andere bestanden verwerken vooral gegevens die vanuit het formulier worden meegegeven.
     </p>
     <p>Hier is een flowchart van hoe het systeem in elkaar zit:</p>
-    <img src="../img/flowchart.png" alt="">
+    <img src="../examen2018/img/flowchart.png" alt="">
   </div>
 </div>
 
