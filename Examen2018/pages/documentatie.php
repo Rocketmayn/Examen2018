@@ -36,12 +36,12 @@
 
   <strong>Footer.html</strong> <br />
   <div class="col6">
-  <img src="../examen2018/img/footercode1.png">
+    <img src="../examen2018/img/footercode.png">
   </div>
   <div class="col6">
-  <img src="../examen2018/img/footercode.png">
+  <img src="../examen2018/img/footercode1.png">
   </div>
-  <p>In de footer word de container en content box gesloten.
+  <p style="clear: both;">In de footer word de container en content box gesloten.
   De HTML van het registratieformulier is hierin in de rechtergoot ingeladen. <br />
   Het bestand sluit elke pagina af met het inladen van Javascript.
   </p>

@@ -3,9 +3,22 @@ html{
   width: 100%;
   overflow-x: hidden;
   }
-body{
-  min-height: 100vh;
-  min-width: 100vw;
+
+  @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+:root {
+  --background: rgba(0, 214, 170, .85);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
 }
 
 img{
@@ -17,7 +30,7 @@ img{
 }
 
 .container-fluid{
-  box-shadow: 3px 3px 50px 5px #ccc;
+
 }
 
 .codereview{
@@ -72,6 +85,7 @@ header {
   z-index: 999;
   width: 100%;
   min-height: 130px;
+  box-shadow: 3px 3px 31px 6px #ccc;
 }
 
 header h1{
