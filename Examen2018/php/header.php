@@ -1,13 +1,17 @@
-<header class="mainHeader">
-  <h1 class="text-left ml-5">Examen 2018</h1>
-  <nav class="menubar menubar-expand-lg">
-    <ul class="nav justify-content-center">
-      <li class="menu-item"><a class="menu-link active" href="index.php">Home</a></li>
-      <li class="menu-item"><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
-      <li class="menu-item"><a class="menu-link" href="#">Contact</a></li>
-      <li class="menu-item"><a class="menu-link" href="php/profile.php">Account</a></li>
+<header>
+  <h1 class="logo">Examen 2018</h1>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
+  <nav>
+    <ul>
+      <li><a class="menu-link active" href="index.php">Home</a></li>
+      <li><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
+      <li><a class="menu-link" href="#">Contact</a></li>
+      <li><a class="menu-link" href="php/profile.php">Account</a></li>
     </ul>
   </nav>
+  <label for="nav-toggle" class="nav-toggle-label">
+    <span></span>
+  </label>
 </header>
 
 <!-- DE HREF LOOPT VIA INDEX DIRECTORY -->
@@ -34,4 +38,28 @@
   <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
   <a class="nav-link" href="index.php?logout='1'" style="color: red;">Logout</a>
 <?php endif*/ ?>
+
+<h1 class="logo">Logo</h1>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+<label for="nav-toggle" class="nav-toggle-label">
+  <span></span>
+</label>
+
+<h1 class="text-left ml-5">Examen 2018</h1>
+<nav class="menubar menubar-expand-lg">
+  <ul class="nav justify-content-center">
+    <li class="menu-item"><a class="menu-link active" href="index.php">Home</a></li>
+    <li class="menu-item"><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
+    <li class="menu-item"><a class="menu-link" href="#">Contact</a></li>
+    <li class="menu-item"><a class="menu-link" href="php/profile.php">Account</a></li>
+  </ul>
+</nav>
 -->
