@@ -76,6 +76,12 @@ img{
   width: 50%;
 }
 
+.exit button{
+  margin: 0 auto;
+  width: 25%;
+  display: block;
+}
+
 /* Style the buttons inside the tab */
 .tab2 {
   overflow: hidden;

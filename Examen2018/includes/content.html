@@ -7,10 +7,6 @@
     <div id="overlay">
       <div class="form">
 
-        <div class="exit" onclick="off()">
-          <button name="button" onclick="off()">X</button>
-        </div>
-
           <ul class="tab-group">
             <li class="tab"><a href="#signup">Sign Up</a></li>
             <li class="tab active"><a href="#login">Log In</a></li>
@@ -40,7 +36,7 @@
 
               <p class="forgot"><a href="../examen2018/php/forgot.php">Forgot Password?</a></p>
 
-              <button class="button button-block" name="login" />Log In</button>
+              <input type="submit" value="Submit" class="button button-block" name="login"/>
 
               </form>
 
@@ -90,6 +86,11 @@
 
           <div class="captcha">
             <div class="g-recaptcha" data-theme="dark" data-sitekey="6LdxgF8UAAAAAEbUEOLozghCW0NlfneCakjjQcio"></div>
+            <asp:Button ID="Button1" runat="server" Text="Button" />
+            <div id="captcha"></div>
+          </div>
+          <div class="exit">
+            <button name="button" onclick="off()">Sluiten</button>
           </div>
         </div>
       </div>

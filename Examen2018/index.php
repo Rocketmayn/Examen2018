@@ -6,9 +6,9 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <?php include("includes/links.html"); ?>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>template</title>
+    <?php include("includes/links.html"); ?>
   </head>
 
 <?php
@@ -21,11 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
  ?>
-
   <body>
     <?php include("php/header.php"); ?>
     <?php include('includes/content.html') ?>
-
+    <?php
+      foreach ($_POST as $key => $value) {
+        echo '<p><strong>' . $key.':</strong> '.$value.'</p>';
+      }
+    ?>
     <h2 class="text-center pt-4">Welkom</h2>
     <section class="p-5 mr-2">
       <div class="contentbox">
