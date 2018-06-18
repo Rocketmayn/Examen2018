@@ -9,6 +9,7 @@ session_start();
     <?php include("includes/links.html"); ?>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>template</title>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
 <?php

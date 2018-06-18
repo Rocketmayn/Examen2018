@@ -2,7 +2,7 @@
 /*
 Het wachtwoordherstelformulier, de link naar deze pagina is inbegrepen in het emailbericht forgot.php
 */
-require 'db.php';
+require '../db.php';
 session_start();
 
 // Zorg dat mail en hash variabelen niet leeg zijn
