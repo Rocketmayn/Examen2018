@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <body>
     <?php include("php/header.php"); ?>
     <?php include('includes/content.html') ?>
+
     <h2 class="text-center pt-4">Welkom</h2>
     <section class="p-5 mr-2">
       <div class="contentbox">
@@ -56,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     <?php include('includes/footer.html') ?>
-
     <!--<div class="content">
       notification message
       <?php // if (isset($_SESSION['success'])) : ?>

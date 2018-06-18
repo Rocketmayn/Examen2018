@@ -6,9 +6,9 @@
       <li><a class="menu-link active" href="index.php">Home</a></li>
       <li><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
       <li><a class="menu-link" href="#">Bronnen</a></li>
-      <li class="menu-link"><a href="../Examen2018/registration/login.php">Login</a></li>
-      <li class="menu-link"><?php  if (isset($_SESSION['id'])) {
-        echo '<a href="login.php?action=logout" style="text-decoration:none">Logout</a>';
+      <li class="menu-link"><a href="#overlay" onclick="on()";>Login</a></li>
+      <li class="menu-link"><?php  if (isset($_SESSION['users'])) {
+        echo '<a href="#overlay" style="text-decoration:none">login</a>';
       }else{
         echo '<a href="login.php" style="text-decoration: none">Logout</a>';
       } ?></li>

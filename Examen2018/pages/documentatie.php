@@ -13,9 +13,11 @@
 
 
     <div class="tab2">
-  <button class="tablinks active" onclick="openCity(event, 'Webstructuur')">Webstructuur</button>
-  <button class="tablinks" onclick="openCity(event, 'Styling')">Style</button>
-  <button class="tablinks" onclick="openCity(event, 'Registratie')">Registratie</button>
+  <button class="tablinks active" onclick="openDoc(event, 'Webstructuur')">Webstructuur</button>
+  <button class="tablinks" onclick="openDoc(event, 'Styling')">Style</button>
+  <button class="tablinks" onclick="openDoc(event, 'Registratie')">Registratie</button>
+  <button class="tablinks" onclick="openDoc(event, 'Database')">Database</button>
+<!--  <button class="tablinks" onclick="openDoc(event, 'test')">Test</button>-->
 </div>
 
 <div id="Webstructuur" class="tabcontent">
@@ -121,8 +123,62 @@
   </div>
 </div>
 
+<div id="Database" class="tabcontent">
+  <div class="p-4 mr-5">
+    <h2>Database</h2>
+    <p>Voor het registratie formulier word er gebruik gemaakt van MySql om gebruikers gegevens op te slaan voor het in- uitloggen en voor de verificatie van het account.</p>
+    <p>De database bestaat uit 1 table met 7 kolommen voor data. Dit is hoe de database is opgebouwd:</p>
+    <div class="col6">
+      <img src="../examen2018/img/dbkolom.png" alt="">
+    </div>
+    <div class="col6">
+      <ul class="lijst">
+        <li><span>id:</span><br />Het unieke id meegegeven aan de gebruiker</li>
+        <li><span>first_name:</span><br />Opgegeven voornaam</li>
+        <li><span>last_name:</span><br />Opgegeven achternaam</li>
+        <li><span>email:</span><br />Opgegeven emailadres</li>
+        <li><span>password:</span><br />Opgegeven wachtwoord</li>
+        <li><span>hash:</span><br />Een encryptie voor het wachtwoord</li>
+        <li><span>active:</span><br />Bepaalt of het account is geverifiëerd (0 = false, 1 = true)</li>
+      </ul>
+    </div>
+    <img src="../examen2018/img/dbrow.png" alt=""><br />
+    <p style="clear: both;">
+    CREATE DATABASE accounts;<br />
+
+    CREATE TABLE `accounts`.`users`<br />
+    (<br />
+        `id` INT NOT NULL AUTO_INCREMENT,<br />
+        `first_name` VARCHAR(50) NOT NULL,<br />
+         `last_name` VARCHAR(50) NOT NULL,<br />
+        `email` VARCHAR(100) NOT NULL,<br />
+        `password` VARCHAR(100) NOT NULL,<br />
+        `hash` VARCHAR(32) NOT NULL,<br />
+        `active` BOOL NOT NULL DEFAULT 0,<br />
+    PRIMARY KEY (`id`)
+  </p>
+    );
+    <p style="clear: both;">endline</p>
+  </div>
+</div>
+
+<!--<div id="test" class="tabcontent">
+  <div class="p-4 mr-5">
+    <h2>Database</h2>
+    <p>Voor het registratie formulier word er gebruik gemaakt van MySql om gebruikers gegevens op te slaan voor het in- uitloggen en voor de verificatie van het account.</p>
+    <p>De database bestaat uit 1 table met 7 kolommen voor data. Dit is hoe de database is opgebouwd:</p>
+    <div class="col6">
+      <img src="../examen2018/img/footercode.png">
+    </div>
+    <div class="col6">
+    <img src="../examen2018/img/footercode1.png">
+    </div>
+    <p>test</p>
+  </div>
+</div>-->
+
 <script>
-function openCity(evt, cityName) {
+function openDoc(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
