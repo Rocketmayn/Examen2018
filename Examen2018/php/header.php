@@ -7,11 +7,7 @@
       <li><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
       <li><a class="menu-link" href="#">Bronnen</a></li>
       <li class="menu-link"><a href="#overlay" onclick="on()";>Login</a></li>
-      <li class="menu-link"><?php  if (isset($_SESSION['users'])) {
-        echo '<a href="#overlay" style="text-decoration:none">login</a>';
-      }else{
-        echo '<a href="login.php" style="text-decoration: none">Logout</a>';
-      } ?></li>
+
     </ul>
   </nav>
   <label for="nav-toggle" class="nav-toggle-label">
@@ -23,6 +19,12 @@
 
 
 <!-- Code Snippets
+
+<li class="menu-link"><?php  if (isset($_SESSION['users'])) {
+  echo '<a href="#overlay" style="text-decoration:none">login</a>';
+}else{
+  echo '<a href="login.php" style="text-decoration: none">Logout</a>';
+} ?></li>
 
 <li class="nav-item text-right"><a class="nav-link" href="../Examen2018/registration/login.php">Login</a></li>
 <li class="nav-item text-right"><?php /* if (isset($_SESSION['id'])) {
