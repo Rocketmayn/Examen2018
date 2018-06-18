@@ -64,19 +64,17 @@ img{
 .col6 img{
   max-width: 100%
 }
-
-.container-fluid{
-
-}
-
-.codereview{
-
-}
-
 .customrow {
   min-height: 100vh;
 }
 
+.captcha{
+  width: 100%;
+}
+.captcha .g-recaptcha{
+  margin: 25px auto;
+  width: 50%;
+}
 
 /* Style the buttons inside the tab */
 .tab2 {

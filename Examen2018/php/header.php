@@ -6,8 +6,8 @@
       <li><a class="menu-link active" href="index.php">Home</a></li>
       <li><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
       <li><a class="menu-link" href="pages/bronnen.php">Bronnen</a></li>
-      <li class="menu-link"><a href="#overlay" onclick="on()";>Login</a></li>
-
+      <li class="menu-link"><a><span style="cursor:pointer;" id="#overlay" onclick="on()">Login</span></a></li>
+<!--<a href="#overlay" onclick="on()";>Login</a>-->
     </ul>
   </nav>
   <label for="nav-toggle" class="nav-toggle-label">
