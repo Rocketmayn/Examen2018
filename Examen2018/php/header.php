@@ -5,7 +5,7 @@
     <ul>
       <li><a class="menu-link active" href="index.php">Home</a></li>
       <li><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
-      <li><a class="menu-link" href="pages/bronnen.php">Bronnen</a></li>
+      <li><a class="menu-link" href="#">Bronnen</a></li>
       <li class="menu-link"><a href="#overlay" onclick="on()";>Login</a></li>
 
     </ul>
