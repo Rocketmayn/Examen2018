@@ -19,14 +19,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ( $mysqli->query($sql) ) {
 
-        $_SESSION['message'] = "Your password has been reset successfully!";
+        $_SESSION['message'] = "Het wachtwoord is succesvol opnieuw ingesteld!";
         header("location: success.php");
 
         }
 
     }
     else {
-        $_SESSION['message'] = "Two passwords you entered don't match, try again!";
+        $_SESSION['message'] = "De wachtwoorden komen niet overeen, ze moeten identiek zijn!";
         header("location: error.php");
     }
 

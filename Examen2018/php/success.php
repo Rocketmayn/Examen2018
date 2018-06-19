@@ -9,6 +9,8 @@ session_start();
      <?php include '../includes/links.html' ?>
    </head>
    <body>
+     <div class="form-wrapper">
+
      <div class="form">
        <h1><?= 'Success'; ?></h1>
        <p>
@@ -22,6 +24,7 @@ session_start();
        </p>
        <a href="../examen2018/index.php"> <button class="button button-block">Home</button> </a>
      </div>
+   </div>
 
    </body>
  </html>

@@ -23,8 +23,8 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
         $first_name = $user['first_name'];
 
         // Session message to display on success.php
-        $_SESSION['message'] = "<p>Please check your email <span>$email</span>"
-        . " for a confirmation link to complete your password reset!</p>";
+        $_SESSION['message'] = "<p>Controleer uw email <span>$email</span>"
+        . " voor een verificatie email om uw wachtwoord opnieuw in te stellen!</p>";
 
         // Send registration confirmation link (reset.php)
         $to      = $email;
@@ -48,10 +48,11 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 <html>
 <head>
   <title>Wachtwoord opnieuw instellen</title>
-  <link rel="stylesheet" href="../style/algemeneStyle.css">
+  <link rel="stylesheet" href="../style/Registratie.css">
 </head>
 
 <body>
+<div class="form-wrapper">
 
   <div class="form">
 
@@ -67,6 +68,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     <button class="button button-block"/>Reset</button>
     </form>
   </div>
+</div>
 
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/index.js"></script>
