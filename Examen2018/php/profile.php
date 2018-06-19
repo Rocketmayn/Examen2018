@@ -25,6 +25,8 @@ else {
      <?php include('../includes/content.html') ?>
      <h2 class="text-left pt-4 ml-5">Mijn Account</h2>
      <section class="p-5 mr-5">
+       <div class="form-wrapper">
+
          <div class="form">
            <h1>Welkom</h1>
            <p>
@@ -67,6 +69,7 @@ else {
 
             <a href="php/logout.php"><button class="button button-block" name="logout"/>Log Out</button></a>
          </div>
+       </div>
      </section>
      <?php include('../includes/footer.html') ?>
    </body>

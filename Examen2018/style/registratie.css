@@ -40,8 +40,11 @@ a:hover {
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   color: white !important;
 }
+.form-wrapper p{
+  text-align: center;
+}
 .form-wrapper{
-  width: 40%;
+  width: 50%;
   margin: 0 auto;
 }
 

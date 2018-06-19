@@ -30,10 +30,12 @@ else {
 <head>
   <meta charset="UTF-8">
   <title>Reset je wachtwoord</title>
-  <link rel="stylesheet" href="../style/algemeneStyle.css">
+  <link rel="stylesheet" href="../style/Registratie.css">
 </head>
 
 <body>
+  <div class="form-wrapper">
+
     <div class="form">
 
           <h1>Kies je nieuwe wachtword</h1>
@@ -62,6 +64,7 @@ else {
 
           </form>
 
+        </div>
     </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/index.js"></script>
