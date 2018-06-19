@@ -6,7 +6,14 @@
       <li><a class="menu-link active" href="index.php">Home</a></li>
       <li><a class="menu-link" href="pages/documentatie.php">Documentatie</a></li>
       <li><a class="menu-link" href="pages/bronnen.php">Bronnen</a></li>
-      <li class="menu-link"><a><span style="cursor:pointer;" id="#overlay" onclick="on()">Login</span></a></li>
+      <?php if(isset($_SESSION['logged_in'])!= 0): ?>
+      <li><a class="menu-link" href="php/logout.php" style="cursor:pointer;">logout</a></li>
+      <?php else: ?>
+      <li><a class="menu-link" id="#overlay" onclick="on()" style="cursor:pointer;">login</a></li>
+      <?php endif; ?>
+      <?php if(isset($_SESSION['logged_in'])!= 0)
+      echo '<li class="menu-item"><a class="menu-link" href="php/profile.php">Account</a></li>'; ?>
+
 <!--<a href="#overlay" onclick="on()";>Login</a>-->
     </ul>
   </nav>
@@ -17,8 +24,9 @@
 
 <!-- DE HREF LOOPT VIA INDEX DIRECTORY -->
 
-
 <!-- Code Snippets
+
+<li class="menu-link"><a><span style="cursor:pointer;" id="#overlay" onclick="on()">Login</span></a></li>
 
 <li class="menu-link"><?php  if (isset($_SESSION['users'])) {
   echo '<a href="#overlay" style="text-decoration:none">login</a>';

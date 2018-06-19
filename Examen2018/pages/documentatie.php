@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <?php include("../includes/links.html"); ?>
+    <?php
+    session_start();
+    include("../includes/links.html"); ?>
     <meta charset="utf-8">
     <title></title>
   </head>
