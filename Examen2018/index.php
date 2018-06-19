@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <section class="p-5 mr-2">
       <div class="contentbox">
         <div class="textbox-main col12">
+          <div class="intro" style="">
           <em>Welkom op de portfolio site voor het eindexamen Applicatie -en  Media ontwikkeling anno 2018.</em><br />
           <em>Deze website zal dienen als het geldend eindexamen opdracht voor de opleiding van Applicatie -en Media ontwikkeling voor niveau 4, Deltion Zwolle.</em><br />
           <em>Dit project word uitgevoerd door <strong>Angelo van 't Riet</strong> en <strong>Bas Geijtenbeek</strong> op locatie bij Online Marketing bureau / Stagebedrijf, iClicks. </em>
@@ -55,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           Overigens gaan wij ook gebruik maken van een Trello board om zo taken toe te wijzen en bij te houden.
         </p>
         <p>Alle bronnen, links en referenties worden opgeslagen in een document dat hier op de website te zien zal zijn d.m.v deze link: <a href="#">Bronnen</a></p>
+      </div>
       </div>
     </section>
 

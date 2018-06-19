@@ -20,6 +20,7 @@ body {
 	font-weight: 400;
 }
 
+
 #text{
     position: absolute;
     top: 50%;
@@ -63,6 +64,37 @@ img{
 .col6 img{
   max-width: 100%
 }
+
+.side_menu{
+  background: white;
+  height: 300px;
+  box-shadow: 2px 2px 4px 5px #ccc;
+  width: 200px;
+  margin: 0 auto;
+}
+.side_menu ul{
+  list-style: none;
+  display: inline-block;
+  margin: 22px;
+  padding: 0;
+}
+.side_menu ul li{
+  padding: 4px;
+  border: solid 0px rgba(167, 202, 250, 0.2);
+  margin: 6px;
+  width: 130px;
+  box-shadow: 1px 2px 2px 0px #ccc;
+}
+.side_menu ul li:hover{
+  background-color: #9EC1DE;
+  box-shadow: 1px 2px 2px 0px #ccc;
+}
+
+.side_menu ul li a{
+  text-decoration: none;
+
+}
+
 .customrow {
   min-height: 100vh;
 }
@@ -294,7 +326,7 @@ nav a:hover {
 }*/
 
 .textbox-main{
-  text-align: center;
+
 }
 
 .mainFooter{
@@ -327,6 +359,13 @@ table.customTable th{
   width: 85%;
   margin: 0 auto;
 }
+
+@media only screen and (min-width: 768px) {
+  .side_menu{
+    margin: 0;
+  }
+}
+
 @media only screen and (min-width: 1025px){
   table.customTable td{
     font-size:13px;
@@ -336,6 +375,7 @@ table.customTable th{
     width:120px
     }
   }
+
 @media only screen and (max-width: 620px){table.customTable
 td{font-size:13px;text-align:none}}@media only screen and (max-width: 767px),(min-device-width: 768px) and (max-device-width: 1024px)
 {table,thead,tbody,th,td,tr{display:block}thead
@@ -370,3 +410,23 @@ tr{
     * {
       box-sizing: border-box;
     }
+
+    /* For mobile phones: */
+[class*="col"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col1 {width: 8.33%;}
+    .col2 {width: 16.66%;}
+    .col3 {width: 25%;}
+    .col4 {width: 33.33%;}
+    .col5 {width: 41.66%;}
+    .col6 {width: 50%;}
+    .col7 {width: 58.33%;}
+    .col8 {width: 66.66%;}
+    .col9 {width: 75%;}
+    .col10 {width: 83.33%;}
+    .col11 {width: 91.66%;}
+    .col12 {width: 100%;}
+}
