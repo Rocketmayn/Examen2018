@@ -28,13 +28,13 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
         // Send registration confirmation link (reset.php)
         $to      = $email;
-        $subject = 'Password Reset Link ( clevertechie.com )';
+        $subject = 'Wachtwoord opnieuw instellen';
         $message_body = '
-        Hello '.$first_name.',
+        Hallo '.$first_name.',
 
-        You have requested password reset!
+        Je hebt recent een aanvraag gedaan voor het opnieuw instellen van jouw wachtwoord.
 
-        Please click this link to reset your password:
+        Klik op de volgende link om je wachtwoord opnieuw in te stellen.
 
         http://localhost/AppExamen2018/Examen2018/php/reset.php?email='.$email.'&hash='.$hash;
 
@@ -47,7 +47,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reset Your Password</title>
+  <title>Wachtwoord opnieuw instellen</title>
   <link rel="stylesheet" href="../style/algemeneStyle.css">
 </head>
 
@@ -55,12 +55,12 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
   <div class="form">
 
-    <h1>Reset Your Password</h1>
+    <h1>Wachtwoord opnieuw instellen</h1>
 
     <form action="forgot.php" method="post">
      <div class="field-wrap">
       <label>
-        Email Address<span class="req">*</span>
+        Email Adres<span class="req">*</span>
       </label>
       <input type="email"required autocomplete="off" name="email"/>
     </div>
