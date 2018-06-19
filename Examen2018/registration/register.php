@@ -27,8 +27,7 @@
      $_SESION['logged_in'] = true;
      $_SESSION['message'] =
 
-              "Confirmation link has been sent to $email, please verify
-              your account by clicking on the link in the message!";
+              "Verificatie mail is verstuurd naar $email, Klik op de link om je account te activeren.";
 
     $to       = $email;
     $subject  = 'Verifieer je account ( Examen Applicatie -en Mediaontwikkeling )';
