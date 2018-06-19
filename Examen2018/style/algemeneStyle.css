@@ -305,6 +305,22 @@ nav a:hover {
   }
 }
 
+  .custompadding{
+    padding: 3rem;
+  }
+  @media only screen and (max-width: 768px) {
+    .custompadding{
+      padding: 0;
+    }
+  }
+  .custommargin{
+    margin-right: 3rem;
+  }
+  @media only screen and (max-width: 768px) {
+    .custommargin{
+      margin-right: 0;
+    }
+  }
 .menu-link{
   color: white !important;
 }
@@ -360,9 +376,9 @@ table.customTable th{
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .side_menu{
-    margin: 0;
+    display: none;
   }
 }
 

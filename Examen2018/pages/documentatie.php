@@ -11,7 +11,7 @@
     <?php include("../php/header.php"); ?>
     <?php include('../includes/content.html') ?>
     <h1 class="text-center pt-4">Documentatie</h1>
-    <section class="p-5 mr-5">
+    <section class="custompadding custommargin">
 
 
     <div class="tab2">
