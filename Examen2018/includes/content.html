@@ -4,15 +4,38 @@
   <div class="left-gutter col2" style="background-color: #E0E0E0;">
     <div class="side_menu">
       <ul>
-        <li> <a href="#">Documentatie</a> </li>
-        <li> <a href="#">bronnen</a> </li>
-        <li> <a href="#">Account</a> </li>
+        <li> <a href="pages/documentatie.php">Documentatie</a> </li>
+        <li> <a href="pages/bronnen.php">bronnen</a> </li>
+        <?php if(isset($_SESSION['logged_in'])!= 0): ?>
+        <li><a href="php/logout.php" style="cursor:pointer;">logout</a></li>
+        <?php else: ?>
+        <li><a id="#overlay" onclick="on()" style="cursor:pointer;">login</a></li>
+        <?php endif; ?>
+        <?php if(isset($_SESSION['logged_in'])!= 0)
+        echo '<li><a href="php/profile.php">Account</a></li>'; ?>
       </ul>
     </div>
   </div>
 
   <div class="primaryContent col8">
     <div id="overlay">
+
+      <?php
+    if (isset($_POST['submit'])) {
+        $username = $_POST['email'];
+        $secretKey = "6Lfb9l8UAAAAAGtEZA3qDzbRLqPhS-7Yr5ytFenH";
+        $responseKey = $_POST['g-recaptcha-response'];
+        $userIP = $_SERVER['REMOTE_ADDR'];
+
+        $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
+        $response = file_get_contents($url);
+        $response = json_decode($response);
+        if ($response->success)
+            echo "Verification success. Your name is: $username";
+        else
+            echo "Verification failed!";
+    }
+?>
       <div class="form">
 
           <ul class="tab-group">
@@ -42,9 +65,8 @@
               </div>
 
               <p class="forgot"><a href="../examen2018/php/forgot.php">Wachtwoord vergeten?</a></p>
-
-              <input type="submit" value="Submit" class="button button-block" name="login"/>
-
+              <input type="submit" value="Log in" class="button button-block" name="login"/>
+              <!--<div class="g-recaptcha" data-theme="dark" data-sitekey="6Lfb9l8UAAAAAMiJO3Y3lDtF1p6FY3F2ZC3cuYAV"></div>-->
               </form>
 
             </div>
@@ -84,18 +106,18 @@
                 <input type="password"required autocomplete="off" name='password'/>
               </div>
 
-              <button type="submit" class="button button-block" name="register" />Registreer</button>
-              </form>
-
+              <input type="submit" class="button button-block" name="register" value="Registreer"/>
+              <!--<div class="g-recaptcha" data-theme="dark" data-sitekey="6Lfb9l8UAAAAAMiJO3Y3lDtF1p6FY3F2ZC3cuYAV"></div>-->
             </div>
-
+          </form>
           </div>
-
-          <div class="captcha">
-            <div class="g-recaptcha" data-theme="dark" data-sitekey="6LdxgF8UAAAAAEbUEOLozghCW0NlfneCakjjQcio"></div>
+          <!-- ReCaptcha API -->
+          <script src='https://www.google.com/recaptcha/api.js'></script>
+          <!--<div class="captcha">
             <asp:Button ID="Button1" runat="server" Text="Button" />
             <div id="captcha"></div>
-          </div>
+          </div>-->
+
           <div class="exit">
             <button name="button" onclick="off()">Sluiten</button>
           </div>

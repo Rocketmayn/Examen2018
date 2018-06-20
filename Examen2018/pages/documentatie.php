@@ -158,9 +158,16 @@
     <h2>Forgot.php</h2>
     <p>
       Dit bestand bestaat eigenlijk uit 2 delen. Ik begin met het gedeelte van de code om je wachtwoord te resetten. Bovenaan het bestand gebruiker we een require. Deze hebben we nodig omdat we bij de database moeten zijn. Door middel van een SQL statement:
-      <br />
-      <img src="../examen2018/img/image008.png" alt=""/><br />
     </p>
+    <div class="col6"><img src="../examen2018/img/image008.png" alt=""/></div>
+      <br />
+<div class="clear"></div>
+
+  <div class="col6">
+    <img src="../examen2018/img/image009.png" style="margin: 0 auto; display: block;" alt=""/><br />
+  </div>
+
+  <div class="col6">
     <p>
       Hier word gekeken of je e-mail adres wel bestaat in de database.<br />
       Anders krijg je de melding:<br />
@@ -170,9 +177,11 @@
       Vervolgens word er een sessie gestart en krijg je de melding: Bekijk je e-mail voor de link om je wachtwoord re resetten.<br />
       Vervolgend word deze mail verstuurt naar je e-mailadres met de link daarin om je wachtwoord te resetten.<br />
       Verder is dit bestand gekoppeld aan de reset.php, hier kom ik nog op terug.
-      <img src="../examen2018/img/image009.png" style="margin: 0 auto; display: block;" alt=""/><br />
     </p>
+  </div>
 
+<div class="clear"></div>
+<div class="col6">
     <h2>Login.php</h2>
     <p>
 
@@ -190,23 +199,93 @@
       Dit gebeurt allemaal doormiddel 2 if else statement.
 
     </p>
-    <p><img src="../examen2018/img/image013.png" style="margin: 0 auto; display: block;" alt=""/><br /></p>
-
+  </div>
+    <div class="col6">
+      <img src="../examen2018/img/image013.png" style="margin: 0 auto; display: block;" alt=""/>
+    </div>
+  <div class="clear"></div>
+  <div class="col6">
+    <img src="../examen2018/img/image014.png" style="margin: 0 auto; display: block;" alt=""/><br />
+  </div>
+  <div class="col6">
     <h2>Logout.php</h2>
     <p>
-
       Hier gebeurt niet heel veel bijzonders gedaan. De sessie word aangemaakt vervolgens onklaar gemaakt en vernietigd. Je bent daarna uitgelogd. Session unset vernietigd een bepaalde sessie en destroy vernietigd ze allemaal. Dit is beetje ter extra veiligheid.
-
     </p>
-    <img src="../examen2018/img/image014.png" style="margin: 0 auto; display: block;" alt=""/><br />
-
-    <h2>Profile.php</h2>
-    <p>Deze pagina is alleen zichtbaar als je ingelogd bent en dus een account hebt. Hier kun je de informatie inzien die je hebt gemaakt bij het inloggen.<br />
-    Als je niet ingelogd bent en toch op de pagina te komen krijg je de melding dat je eerst moet inloggen op de pagina te komen.<br />
-    Als je wel ingelogd bent haalt hij de gegevens op die bij je account horen en word de sessie op actief gezet zodat je de pagina en je gegevens kan inzien.<br />
-    Ook word er gecheckt of je account wel geactiveerd is, als dit nog niet gebeurd is zal je eerst nog je account moeten verifiëren om de pagina te bereiken.</p>
   </div>
-</div>
+<div class="clear"></div>
+
+
+    <div class="clear"></div>
+    <div class="col6">
+      <h2>Profile.php</h2>
+      <p>Deze pagina is alleen zichtbaar als je ingelogd bent en dus een account hebt. Hier kun je de informatie inzien die je hebt gemaakt bij het inloggen.<br />
+        Als je niet ingelogd bent en toch op de pagina te komen krijg je de melding dat je eerst moet inloggen op de pagina te komen.<br />
+        Als je wel ingelogd bent haalt hij de gegevens op die bij je account horen en word de sessie op actief gezet zodat je de pagina en je gegevens kan inzien.<br />
+        Ook word er gecheckt of je account wel geactiveerd is, als dit nog niet gebeurd is zal je eerst nog je account moeten verifiëren om de pagina te bereiken.</p>
+    </div>
+    <div class="col6">
+      <img src="../examen2018/img/image016.png" style="margin: 0 auto; display: block;" alt=""/><br />
+    </div>
+
+    <div class="clear"></div>
+    <div class="col6">
+      <img src="../examen2018/img/image018.png" style="margin: 0 auto; display: block;" alt=""/><br />
+    </div>
+    <div class="col6">
+    <h2>Reset.php</h2>
+
+      <p>Dit bestand is gekoppeld aan de forgot.php
+      Eerst word er gekeken of de hash en mail variabelen niet leeg zijn, vervolgens kijkt hij of deze wel bestaan en matched deze als dit lukt kun je gewoon het wachtwoord resetten.
+      Als er bijvoorbeeld een verkeerde URL word ingevuld om het wachtwoord te resetten krijg je hier een foutmelding van.
+      Als de verificatie niet gelukt is krijg daar ook een melding van.
+      In beide gevallen kun je dan in ieder geval nog niet je wachtwoord resetten.</p>
+    </div>
+
+    <div class="clear"></div>
+    <div class="col6">
+    <h2>Reset_password.php</h2>
+
+    <p>Dit is de code om de database te updaten met het nieuwe aangemaakte wachtwoord. Let op dat hier post gebruikt word anders gaat dit niet werken.
+    Als je het nieuwe wachtwoord aanmaakt moet je die 2 keer invullen. Zorg dat deze matchen anders werkt dit niet. Dit is ter extra veiligheid. Als deze niet matchen krijg je daar een aparte foutmelding van.
+    Als de wachtwoorden wel matchen word er een statement uitgevoerd waardoor de velden in de database worden vernieuwd en het nieuwe wachtwoord word opgeslagen.
+    Als dit statement is uitgevoerd krijg je een melding en kun je weer inloggen met de nieuwe gegevens. </p>
+    </div>
+    <div class="col6">
+    <img src="../examen2018/img/image020.png" style="margin: 0 auto; display: block;" alt=""/>
+    </div>
+
+    <div class="clear"></div>
+    <div class="col6">
+      <img src="../examen2018/img/image021.png" style="margin: 0 auto; display: block;" alt=""/>
+    </div>
+
+    <div class="col6">
+      <h2>Succes.php</h2>
+
+      <p>Dit bestand doet eigenlijk ook niet zoveel. Als een handeling gelukt is krijg je de succes message. Echter worden deze opgehaald uit andere templates door middel van sessions. Vanuit die sessions haalt hij dit bestand dan weer op. </p>
+
+    </div>
+
+    <div class="clear"></div>
+    <div class="col6">
+      <h2>Verify.php</h2>
+
+      <p>Deze code gebruiken we om de accounts te activeren. Als je dus een account aangemaakt hebt krijg je een e-mail met een activatie link.
+        Als dit nog niet gebeurt is staat je account in de database met status 0 (niet actief)
+        Als je het account al geactiveerd hebt of een foute URL invult krijg je daar een aparte melding van. Anders krijg je de melding dat je account geactiveerd is.
+        Als je account geactiveerd is word doormiddel van een querie de status op 1 gezet. Je kunt dan gebruik maken van je account.</p>
+
+      </div>
+      <div class="col6">
+        <img src="../examen2018/img/image023.png" style="margin: 0 auto; display: block;" alt=""/>
+      </div>
+
+    <p>end</p>
+    </div>
+    </div>
+
+
 
 <div id="Database" class="tabcontent">
   <div class="p-4 mr-5">
