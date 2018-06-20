@@ -18,15 +18,15 @@ $get_user_data = "";
     </tr>
     <tr>
       <th>Email</th>
-      <td><?php echo $_SESSION['username']; ?></td>
+      <td><?php echo $_SESSION['email']; ?></td>
     </tr>
     <tr>
       <th>First Name</th>
-      <td><?php echo $_SESSION['username']; ?></td>
+      <td><?php echo $_SESSION['first_name']; ?></td>
     </tr>
     <tr>
       <th>Last Name</th>
-      <td><?php echo $_SESSION['username']; ?></td>
+      <td><?php echo $_SESSION['last_name']; ?></td>
     </tr>
   </thead>
 </table>

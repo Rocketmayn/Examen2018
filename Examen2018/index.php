@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       }
     ?>
     <h2 class="text-center pt-4">Welkom</h2>
-    <section class="p-5 mr-2">
+    <section class="custompadding custommargin">
       <div class="contentbox">
         <div class="textbox-main col12">
           <div class="intro" style="">
