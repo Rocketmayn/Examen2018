@@ -19,23 +19,6 @@
 
   <div class="primaryContent col8">
     <div id="overlay">
-
-      <?php
-    if (isset($_POST['submit'])) {
-        $username = $_POST['email'];
-        $secretKey = "6Lfb9l8UAAAAAGtEZA3qDzbRLqPhS-7Yr5ytFenH";
-        $responseKey = $_POST['g-recaptcha-response'];
-        $userIP = $_SERVER['REMOTE_ADDR'];
-
-        $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
-        $response = file_get_contents($url);
-        $response = json_decode($response);
-        if ($response->success)
-            echo "Verification success. Your name is: $username";
-        else
-            echo "Verification failed!";
-    }
-?>
       <div class="form">
 
           <ul class="tab-group">
@@ -65,8 +48,7 @@
               </div>
 
               <p class="forgot"><a href="../examen2018/php/forgot.php">Wachtwoord vergeten?</a></p>
-              <input type="submit" value="Log in" class="button button-block" name="login"/>
-              <!--<div class="g-recaptcha" data-theme="dark" data-sitekey="6Lfb9l8UAAAAAMiJO3Y3lDtF1p6FY3F2ZC3cuYAV"></div>-->
+              <button class="button button-block" name="login" />Log In</button>
               </form>
 
             </div>
@@ -105,18 +87,11 @@
                 </label>
                 <input type="password"required autocomplete="off" name='password'/>
               </div>
-
-              <input type="submit" class="button button-block" name="register" value="Registreer"/>
-              <!--<div class="g-recaptcha" data-theme="dark" data-sitekey="6Lfb9l8UAAAAAMiJO3Y3lDtF1p6FY3F2ZC3cuYAV"></div>-->
+              <button type="submit" class="button button-block" name="register" />Register</button>
             </div>
           </form>
           </div>
-          <!-- ReCaptcha API -->
-          <script src='https://www.google.com/recaptcha/api.js'></script>
-          <!--<div class="captcha">
-            <asp:Button ID="Button1" runat="server" Text="Button" />
-            <div id="captcha"></div>
-          </div>-->
+
 
           <div class="exit">
             <button name="button" onclick="off()">Sluiten</button>
